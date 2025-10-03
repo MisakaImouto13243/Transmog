@@ -10,6 +10,7 @@ public class Settings : ModSettings
     public bool AlphaChannelEnabled;
     public bool IgnoreGenderEnabled;
     public bool Migration;
+    public bool ShowSheildBeltEffect;
 
     public void DoWindowContents(Rect inRect)
     {
@@ -56,7 +57,17 @@ public class Settings : ModSettings
                 IgnoreGenderEnabled = !IgnoreGenderEnabled;
             }
         }
-        {
+		{
+			Rect rowRect = ls.GetRect(height);
+			WidgetRow row = new WidgetRow(rowRect.x, rowRect.y, UIDirection.RightThenDown, ls.ColumnWidth);
+			row.Label("Transmog.ShowSheildBeltEffect".Translate());
+			WidgetRow rowRight = new WidgetRow(ls.ColumnWidth, row.FinalY, UIDirection.LeftThenDown);
+			if (rowRight.ButtonIcon(ShowSheildBeltEffect ? Widgets.CheckboxOnTex : Widgets.CheckboxOffTex))
+			{
+				ShowSheildBeltEffect = !ShowSheildBeltEffect;
+			}
+		}
+		{
             Rect rowRect = ls.GetRect(height);
             if (Widgets.ButtonText(rowRect, "Transmog.Migration".Translate()))
             {
@@ -73,7 +84,8 @@ public class Settings : ModSettings
         Scribe_Values.Look(ref AlphaChannelEnabled, "alphaChannelEnabled");
         Scribe_Values.Look(ref IgnoreGenderEnabled, "ignoreGenderEnabled");
         Scribe_Values.Look(ref Migration, "migration");
-    }
+		Scribe_Values.Look(ref ShowSheildBeltEffect, "sShowSheildBeltEffect");
+	}
 }
 
 public class TransmogMod : Mod

@@ -43,7 +43,7 @@ public static class Utility
     public static Color ToColor(this string hexCode)
     {
         return new Color(
-            Convert.ToInt32(hexCode[..2], 16) / 255f,
+            Convert.ToInt32(hexCode.Substring(0, 2), 16) / 255f,
             Convert.ToInt32(hexCode.Substring(2, 2), 16) / 255f,
             Convert.ToInt32(hexCode.Substring(4, 2), 16) / 255f,
             hexCode.Length == 8 ? Convert.ToInt32(hexCode.Substring(6, 2), 16) / 255f : 1

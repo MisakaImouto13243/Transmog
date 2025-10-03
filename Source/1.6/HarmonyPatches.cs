@@ -105,6 +105,10 @@ public static class HarmonyPatches
 
     public static bool Prefix_Shield(ref CompShield __instance, ref bool __result)
     {
+        if (TransmogMod.settings.ShowSheildBeltEffect == true)
+        {
+            return true;
+        }
         if (__instance.parent is Apparel { Wearer: not null })
         {
             __result = false;
