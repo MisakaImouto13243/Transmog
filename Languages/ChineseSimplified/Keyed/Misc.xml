@@ -5,6 +5,7 @@
     <Transmog.DisabledOnDraft>征召时禁用</Transmog.DisabledOnDraft>
     <Transmog.AlphaChannelEnabled>启用Alpha通道</Transmog.AlphaChannelEnabled>
     <Transmog.IgnoreGenderEnabled>忽略性别</Transmog.IgnoreGenderEnabled>
+    <Transmog.ShowSheildBeltEffect>显示护盾腰带的护盾特效</Transmog.ShowSheildBeltEffect>
 
     <Transmog.DraftedTransmogEnabled>启用征召幻化</Transmog.DraftedTransmogEnabled>
 

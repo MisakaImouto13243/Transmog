@@ -5,6 +5,7 @@
     <Transmog.DisabledOnDraft>Disabled On Draft</Transmog.DisabledOnDraft>
     <Transmog.AlphaChannelEnabled>Enable Alpha Channel</Transmog.AlphaChannelEnabled>
     <Transmog.IgnoreGenderEnabled>Ignore Gender</Transmog.IgnoreGenderEnabled>
+    <Transmog.ShowShieldBeltEffect>Show Shield Belt Effect</Transmog.ShowShieldBeltEffect>
 
     <Transmog.DraftedTransmogEnabled>Enable Drafted Transmog</Transmog.DraftedTransmogEnabled>
 
